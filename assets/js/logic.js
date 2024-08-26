@@ -1,9 +1,13 @@
 // Función para obtener la elección del computador
-function obtenerEleccionComputador(){
+function obtenerEleccionComputador() {
     const opciones = ["Piedra", "Papel", "Tijera"];
-    const indice = Math.floor(Math.random()*3);
+    const indice = Math.floor(Math.random() * opciones.length);
     return opciones[indice];
 }
+
+const eleccionComputadora = obtenerEleccionComputador();
+console.log("La computadora eligió:", eleccionComputadora);
+
 // Función para determinar el ganador
 function determinarGanador(eleccionUsuario, eleccionComputadora) {
     if (eleccionUsuario === eleccionComputadora) {
