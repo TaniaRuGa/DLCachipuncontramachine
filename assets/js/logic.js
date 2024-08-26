@@ -1,7 +1,7 @@
 // Función para obtener la elección del computador
 function obtenerEleccionComputador() {
     const opciones = ["Piedra", "Papel", "Tijera"];
-    const indice = Math.floor(Math.random() * opciones.length);
+    const indice = Math.floor(Math.random()* opciones.length);
     return opciones[indice];
 }
 
