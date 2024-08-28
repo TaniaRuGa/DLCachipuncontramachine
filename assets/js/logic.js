@@ -22,6 +22,8 @@ function determinarGanador(eleccionUsuario, eleccionComputadora) {
 function jugarCachipun() {
     const veces = parseInt(prompt("¿Cuántas veces deseas jugar?"));
     for (let i = 0; i < veces; i++) {
+        // Generar un número aleatorio entre 1 y 3
+        const numAleatorio = Math.floor(Math.random()*3) + 1;
         const eleccionUsuario = prompt("Elige: Piedra, Papel o Tijera");
         const eleccionComputadora = prompt("Elige: Piedra, Papel o Tijera");
         const resultado = determinarGanador(eleccionUsuario, eleccionComputadora);
