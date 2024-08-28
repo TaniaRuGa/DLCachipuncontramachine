@@ -24,8 +24,20 @@ function jugarCachipun() {
     for (let i = 0; i < veces; i++) {
         // Generar un número aleatorio entre 1 y 3
         const numAleatorio = Math.floor(Math.random()*3) + 1;
+
+        // Asignar la elección de la computadora según el número aleatorio
+        let eleccionComputadora;
+        if (numAleatorio === 1) {
+            eleccionComputadora = "Piedra";
+        } else if (numAleatorio === 2) {
+            eleccionComputadora = "Papel";
+        } else {
+            eleccionComputadora = "Tijera";
+        }
+
         const eleccionUsuario = prompt("Elige: Piedra, Papel o Tijera");
         const eleccionComputadora = prompt("Elige: Piedra, Papel o Tijera");
+        
         const resultado = determinarGanador(eleccionUsuario, eleccionComputadora);
         alert(`Tú elegiste: ${eleccionUsuario}\nLa computadora eligió: ${eleccionComputadora}\nResultado: ${resultado}`);
     }
